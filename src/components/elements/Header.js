@@ -32,7 +32,7 @@ const StyledRMDBLogo = styled.img`
 
 const StyledTMDBLogo = styled.img`
   width: 122px;
-  margin-top: 25px;
+  margin-top: 20px;
   float: right;
 
   @media screen and (max-width: 500px){

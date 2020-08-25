@@ -31,13 +31,19 @@ export const useGetMovies = () => {
 
   }
 
+  const getRandomImage = (res)=>{
+    return Math.floor(Math.random() * res.length)
+  }
+ 
+
   useEffect(() => {
+    
     const result = getMovies(`${API_URL}movie/popular`)
     result.then(res => {
       setState((prev) => ({
         ...prev,
         movies: [...res.results],
-        heroImage: prev.heroImage || res.results[0],
+        heroImage: prev.heroImage || res.results[getRandomImage(res.results)],
         currentPage: res.page,
         totalPages: res.total_pages
       }))
