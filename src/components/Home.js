@@ -15,9 +15,16 @@ const Home = () => {
 
   const [{state, loading, error, }, getMovies] = useGetMovies();
 
+  if(error) return <div>Something Went Wrong</div>
+  if(!state.movies[0]) return <Spinner/> ;
+
   return (
     <>
-      <HeroImage />
+      <HeroImage 
+        image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.heroImage.backdrop_path}`} 
+        title={state.heroImage.original_title}
+        text={state.heroImage.overview}
+      />
       <SearchBar  />
       <Grid />
       <MovieThumb />
