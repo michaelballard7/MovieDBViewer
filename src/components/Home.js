@@ -60,8 +60,7 @@ const Home = () => {
       </Grid>
 
       {loading && <Spinner />}
-
-      <LoadMoreBtn text={"Load More Movies"} callback={loadMoreMovies} />
+      {state.currentPage < state.totalPages && !loading && (<LoadMoreBtn text={"Load More Movies"} callback={loadMoreMovies} />) }
 
     </>
   )
