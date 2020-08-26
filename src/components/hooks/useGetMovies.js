@@ -10,23 +10,25 @@ export const useGetMovies = () => {
   const [loadSearch, setLoadSearch] = useState(0)
   const [endPoint, setEndPoint] = useState(`${API_URL}movie/popular?api_key=${API_KEY}`)
 
-  const getMovies = async (endpoint,page) => {
+  const getMovies = async (endpoint, page) => {
+
     setEndPoint(endpoint)
     setError(false)
     setLoading(true)
 
-    if(page){
-      setState((prev)=>(
-        {...prev, currentPage: prev.currentPage + 1}))
+    if (page) {
+      setState((prev) => (
+        { ...prev, currentPage: prev.currentPage + 1 }))
     }
 
-    if(endpoint){
+    if (endpoint) {
       setLoadSearch(endpoint.search('page'));
     }
 
     try {
       const result = await (await axios.get(endPoint, {
       })).data
+
       return result
 
     } catch (err) {
@@ -35,7 +37,6 @@ export const useGetMovies = () => {
     } finally {
       setLoading(false)
     }
-
   }
 
   const getRandomImage = (res) => {
@@ -43,9 +44,13 @@ export const useGetMovies = () => {
   }
 
   useEffect(() => {
+
     if (endPoint) {
+
       console.log('next request endpoint', endPoint)
+
       const result = getMovies(endPoint)
+
       result.then(res => {
         setState((prev) => ({
           ...prev,
@@ -64,3 +69,4 @@ export const useGetMovies = () => {
   return [{ state, loading, error }, getMovies]
 
 }
+

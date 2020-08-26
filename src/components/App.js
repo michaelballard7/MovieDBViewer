@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './elements/Header'
 import Home from './Home';
 
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -15,10 +15,10 @@ const GlobalStyle = createGlobalStyle`
 
 const App = () => (
   <>
-     <Header/> 
-     <Home/>
-     <GlobalStyle />
+    <Header />
+    <Home />
+    <GlobalStyle />
   </>
-  );
+);
 
 export default App;

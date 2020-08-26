@@ -8,33 +8,30 @@ import Spinner from './elements/Spinner';
 
 import { API_URL, API_KEY, IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from '../config'
 
-// custom hook
 import { useGetMovies } from './hooks/useGetMovies'
 
 import NoImage from './images/no_image.jpg'
 
 const Home = () => {
 
-  const [{ state, loading, error}, getMovies] = useGetMovies();
+  const [{ state, loading, error }, getMovies] = useGetMovies();
 
   const [searchTerm, setSearchTerm] = useState("");
 
   const loadMoreMovies = () => {
-     
-      const searchEndpoint = `${API_URL}search/movie?api_key=${API_KEY}&query=${searchTerm}&page=${state.currentPage + 1}`;
 
-      const popularEndpoint = `${API_URL}movie/popular?api_key=${API_KEY}&page=${state.currentPage + 1}`;
+    const searchEndpoint = `${API_URL}search/movie?api_key=${API_KEY}&query=${searchTerm}&page=${state.currentPage + 1}`;
 
-      const endPoint = searchTerm ? searchEndpoint : popularEndpoint;
+    const popularEndpoint = `${API_URL}movie/popular?api_key=${API_KEY}&page=${state.currentPage + 1}`;
 
-      getMovies(endPoint, state.currentPage);
+    const endPoint = searchTerm ? searchEndpoint : popularEndpoint;
 
-      console.log(endPoint)
-
+    getMovies(endPoint, state.currentPage);
 
   }
 
   if (error) return <div>Something Went Wrong</div>
+
   if (!state.movies[0]) return <Spinner />;
 
   return (
@@ -70,9 +67,6 @@ const Home = () => {
   )
 
 }
-
-
-
 
 
 export default Home;
