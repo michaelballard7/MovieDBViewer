@@ -8,8 +8,6 @@ export const useGetMovies = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-
-
   const getMovies = async (endpoint) => {
     setError(false)
     setLoading(true)
@@ -17,7 +15,7 @@ export const useGetMovies = () => {
     const isLoadMore = endpoint.search('page')
 
     try {
-      const res = await( await fetch(endpoint,)).json();
+      const res = await (await fetch(endpoint,)).json();
       console.log(res)
       setState(prev => ({
         ...prev,
@@ -37,9 +35,9 @@ export const useGetMovies = () => {
     return Math.floor(Math.random() * res.length)
   }
 
-  useEffect( () => {
+  useEffect(() => {
     getMovies(POPULAR_BASE_URL)
-  },[])
+  }, [])
 
 
   return [{ state, loading, error }, getMovies]

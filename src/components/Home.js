@@ -46,13 +46,7 @@ const Home = () => {
        image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.heroImage.backdrop_path}`}
        title={state.heroImage.original_title}
        text={state.heroImage.overview}
-     />
-
-    )
-
-
-
-    }
+     /> )}
      
       <SearchBar callback={searchMovies} />
 
