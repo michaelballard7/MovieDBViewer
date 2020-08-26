@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { POPULAR_BASE_URL } from '../../config'
 
-
 export const useGetMovies = () => {
 
   const [state, setState] = useState({ movies: [] });
@@ -11,12 +10,9 @@ export const useGetMovies = () => {
   const getMovies = async (endpoint) => {
     setError(false)
     setLoading(true)
-
     const isLoadMore = endpoint.search('page')
-
     try {
       const res = await (await fetch(endpoint,)).json();
-      console.log(res)
       setState(prev => ({
         ...prev,
         movies: isLoadMore !== -1 ? [...prev.movies, ...res.results] : [...res.results],
@@ -39,7 +35,5 @@ export const useGetMovies = () => {
     getMovies(POPULAR_BASE_URL)
   }, [])
 
-
   return [{ state, loading, error }, getMovies]
-
 }
