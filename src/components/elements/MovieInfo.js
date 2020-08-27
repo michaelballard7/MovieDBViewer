@@ -1,6 +1,6 @@
 import React from 'react'
 import NoImage from '../images/no_image.jpg';
-import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from '../../config';
+import { IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 import MovieThumb from './MovieThumb';
 import { StyledMovieInfo } from '../styles/StyledMovieInfo';
 

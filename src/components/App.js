@@ -21,8 +21,11 @@ const App = () => (
       <Header />
 
       <Switch>
-        <Route path="/:movieId" component={Movie} exact/> 
         <Route path="/" component={Home} exact />
+        <Route path="/MovieDBViewer" component={Home} exact />
+        <Route path="/:movieId" component={Movie} exact/> 
+        
+
         <Route component={NotFound} />
       </Switch>
       

@@ -15,7 +15,7 @@ const Movie = (props) => {
 
   const [movie, loading, error] = useGetMovie(movieId)
 
-  if(error) return <div>Something Went Wrong </div>
+  if(error) return <div>Something Went Wrong with movie fetch </div>
 
   if(loading) return <Spinner />
 

@@ -24,6 +24,7 @@ const Home = () => {
     const searchEndpoint = `${SEARCH_BASE_URL}${searchTerm}&page=${state.currentPage + 1}&include_adult=true`;
     const popularEndpoint = `${POPULAR_BASE_URL}&page=${state.currentPage + 1}`;
     const endPoint = searchTerm ? searchEndpoint : popularEndpoint;
+    console.log('the endpoint', endPoint)
     getMovies(endPoint);
   }
 
