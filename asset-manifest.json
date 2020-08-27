@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/MovieDBViewer/static/js/main.06b2885f.chunk.js",
-    "main.js.map": "/MovieDBViewer/static/js/main.06b2885f.chunk.js.map",
+    "main.js": "/MovieDBViewer/static/js/main.fc2a4674.chunk.js",
+    "main.js.map": "/MovieDBViewer/static/js/main.fc2a4674.chunk.js.map",
     "runtime-main.js": "/MovieDBViewer/static/js/runtime-main.dab93ead.js",
     "runtime-main.js.map": "/MovieDBViewer/static/js/runtime-main.dab93ead.js.map",
     "static/js/2.f43bee0c.chunk.js": "/MovieDBViewer/static/js/2.f43bee0c.chunk.js",
     "static/js/2.f43bee0c.chunk.js.map": "/MovieDBViewer/static/js/2.f43bee0c.chunk.js.map",
     "index.html": "/MovieDBViewer/index.html",
-    "precache-manifest.7586a81a0d94657fe3df361aab8ebeca.js": "/MovieDBViewer/precache-manifest.7586a81a0d94657fe3df361aab8ebeca.js",
+    "precache-manifest.3dc563c3a0c3ab6d958806f1409d47a5.js": "/MovieDBViewer/precache-manifest.3dc563c3a0c3ab6d958806f1409d47a5.js",
     "service-worker.js": "/MovieDBViewer/service-worker.js",
     "static/js/2.f43bee0c.chunk.js.LICENSE.txt": "/MovieDBViewer/static/js/2.f43bee0c.chunk.js.LICENSE.txt",
     "static/media/no_image.jpg": "/MovieDBViewer/static/media/no_image.31f5bb1d.jpg",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime-main.dab93ead.js",
     "static/js/2.f43bee0c.chunk.js",
-    "static/js/main.06b2885f.chunk.js"
+    "static/js/main.fc2a4674.chunk.js"
   ]
 }
